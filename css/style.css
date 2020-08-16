@@ -35,11 +35,13 @@ p.description {
 div.card {
   margin: 0 auto;
   padding: 25px 30px;
-  width: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   border: 1px solid #D7D7D7;
   border-radius: 15px;
   background: #FFF;
   box-shadow: -1px -4px 20px #000000b0;
+  
 }
 
 div.numbers div {
