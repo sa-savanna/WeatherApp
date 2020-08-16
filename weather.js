@@ -1,5 +1,6 @@
 const city = document.querySelector(".city")
 const description = document.querySelector('.description')
+const localTime = document.querySelector('.local-time')
 const date = document.querySelector('.date')
 const temp = document.querySelector('.temp')
 const values = document.querySelectorAll(".value")
@@ -24,7 +25,7 @@ class WeatherApp {
                 return response.json()
             })
             .then((data1) => {
-                console.log(data1);
+                // console.log(data1);
                 let hour1 = new Date(data1.list[0].dt_txt).getHours()
                 let hour2 = new Date(data1.list[1].dt_txt).getHours()
                 let hour3 = new Date(data1.list[2].dt_txt).getHours()
@@ -37,24 +38,24 @@ class WeatherApp {
                 var ampm4 = (hour4 >= 12) ? "PM" : "AM";
                 var ampm5 = (hour5 >= 12) ? "PM" : "AM";
 
-                document.querySelector('.morning').innerHTML = 
-                `<img src='http://openweathermap.org/img/wn/${data1.list[0].weather[0].icon}@2x.png' alt="">
+                document.querySelector('.morning').innerHTML =
+                    `<img src='http://openweathermap.org/img/wn/${data1.list[0].weather[0].icon}@2x.png' alt="">
                 <span class="hours">${hour1} ${ampm1}</span>`
 
-                document.querySelector('.noon').innerHTML = 
-                `<img src='http://openweathermap.org/img/wn/${data1.list[1].weather[0].icon}@2x.png' alt="">
+                document.querySelector('.noon').innerHTML =
+                    `<img src='http://openweathermap.org/img/wn/${data1.list[1].weather[0].icon}@2x.png' alt="">
                 <span class="hours">${hour2} ${ampm2}</span>`
 
-                document.querySelector('.afternoon').innerHTML = 
-                `<img src='http://openweathermap.org/img/wn/${data1.list[2].weather[0].icon}@2x.png' alt="">
+                document.querySelector('.afternoon').innerHTML =
+                    `<img src='http://openweathermap.org/img/wn/${data1.list[2].weather[0].icon}@2x.png' alt="">
                 <span class="hours">${hour3} ${ampm3}</span>`
 
-                document.querySelector('.evening').innerHTML = 
-                `<img src='http://openweathermap.org/img/wn/${data1.list[3].weather[0].icon}@2x.png' alt="">
+                document.querySelector('.evening').innerHTML =
+                    `<img src='http://openweathermap.org/img/wn/${data1.list[3].weather[0].icon}@2x.png' alt="">
                 <span class="hours">${hour4} ${ampm4}</span>`
 
-                document.querySelector('.night').innerHTML = 
-                `<img src='http://openweathermap.org/img/wn/${data1.list[4].weather[0].icon}@2x.png' alt="">
+                document.querySelector('.night').innerHTML =
+                    `<img src='http://openweathermap.org/img/wn/${data1.list[4].weather[0].icon}@2x.png' alt="">
                 <span class="hours">${hour5} ${ampm5}</span>`
 
             })
@@ -76,7 +77,7 @@ class WeatherApp {
                 imgIcon.innerHTML = `<img src='http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png' alt="">`;
                 pressure.innerHTML = `${data.main.pressure} hPa`;
                 humidity.innerHTML = `${data.main.humidity}%`;
-                wind.innerHTML = `${data.wind.speed} meters/sec`;
+                wind.innerHTML = `${data.wind.speed} m/sec`;
 
                 let currentTime = new Date();
                 var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
