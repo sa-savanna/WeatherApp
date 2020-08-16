@@ -5,7 +5,10 @@ body {
   font-size: 18px;
   color: #333;
   background-color: #F4F8FA;
-  
+  background-image: url(https://cdn3.vectorstock.com/i/1000x1000/85/67/background-with-decoration-sun-blue-sky-and-clouds-vector-3738567.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 hr {
@@ -42,21 +45,26 @@ div.numbers div {
   display: inline-block;
   vertical-align: middle;
 }
+
 div.numbers .temp {
   font-weight: 300;
   font-size: 96px;
 }
+
 div.numbers .temp .unit {
   font-weight: 700;
   font-size: 40px;
   vertical-align: super;
 }
-div.numbers .icon > img {
+
+div.numbers .icon>img {
   width: 120px;
 }
+
 div.numbers .measurements tr {
   height: 30px;
 }
+
 div.numbers .measurements .label {
   width: 100px;
   color: #777;
@@ -67,6 +75,7 @@ div.hourly div {
   width: 80px;
   text-align: center;
 }
+
 div.hourly img {
   width: 80px;
 }
@@ -76,6 +85,7 @@ div.search h1.city {
   font-weight: 700;
   font-size: 27px;
 }
+
 div.search input {
   margin: 0;
   margin-bottom: -4px;
@@ -89,9 +99,11 @@ div.search input {
   font-weight: 700;
   font-size: 27px;
 }
+
 div.search input:focus {
   outline: none;
 }
+
 div.search ._edit {
   display: inline-block;
   opacity: 0.4;
@@ -99,13 +111,16 @@ div.search ._edit {
   outline: none;
   border: none;
 }
-div.search ._edit > img {
+
+div.search ._edit>img {
   width: 16px;
 }
+
 div.search ._edit:hover {
   cursor: pointer;
   opacity: 0.8;
 }
+
 div.search div.search-results {
   z-index: 10;
   display: none;
@@ -117,9 +132,11 @@ div.search div.search-results {
   box-shadow: 0 8px 10px #DDD;
   font-weight: 400;
 }
+
 div.search div.search-results li {
   padding: 16px 16px;
 }
+
 div.search div.search-results li:hover {
   cursor: pointer;
   background: #EC6E4C;
